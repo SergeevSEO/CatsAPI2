@@ -4,3 +4,276 @@ body {
     background: #f0f0f0;
     position: relative;
 }
+
+i {
+    pointer-events: none;
+}
+
+input, textarea {
+    display: block;
+}
+
+.hidden {
+    display: none !important;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+p {
+    margin-top: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+.header {
+    background: #ffffff;
+    box-shadow: 0 0 25px rgb(0 0 0 / 25%);
+}
+
+.head {
+    width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.btn {
+    border: 3px solid #bebebe;
+    border-radius: 10px;
+    padding: 7px;
+
+    font-size: 18px; 
+}
+
+.btn:hover, .cat-card__btn:hover {
+    border-color: #5a5a5a;
+}
+
+.btn:active, .cat-card__btn:active {
+    box-shadow: 0 0 5px rgb(0 0 0);
+    border-color: #5a5a5a;
+}
+
+.btn-add-cat {
+    background: #d5ffd8;
+}
+
+.modal-cat-card__btn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.btn-edit{
+    background: #f5d36d;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 30px;
+    grid-column-gap: 25px;
+}
+
+.cat-card {
+    width: 260px;
+    border: 1px solid #bebebe;
+    padding: 9px;
+    border-radius: 7px;
+    background: #fff;
+    position: relative;
+}
+
+.cat-card__img {
+    height: 290px;
+    width: 240px;
+    object-fit: cover;
+    border-radius: 7px;
+    margin-bottom: 8px;
+}
+
+.cat-card__info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.cat-card__text span {
+    font-weight: bold;
+}
+
+.cat-card__btns {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto 10px;
+}
+
+.cat-card__rating i {
+    color: #ffe600;
+}
+
+.cat-card__btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 22px;
+    border: 3px solid #bebebe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cat-card__btn_open {
+    color: #f5d36d;
+}
+
+.cat-card__btn_delete {
+ color: #f4676a;
+ font-size: 26px;
+}
+
+.cat-card__btn_favorite {
+ color: #4bcb90;
+}
+
+.modal-wrapper, .modal-cat-info, .modal-wrapper-edit {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(0 0 0 / 80%);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Модальное окно добавления кота */
+.modal-add-cat, .modal-edit-cat {
+    background: #f0f0f0;
+    position: fixed;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 5vw;
+}
+
+.modal-add-cat input, textarea {
+    margin-top: 2px;
+    padding: 5px;
+}
+
+.modal-edit-cat input, textarea {
+    margin-top: 2px;
+    padding: 5px;
+}
+
+.modal-close {
+    font-size: 16px;
+    color: #f4676a;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+}
+
+.modal-add-cat__numbers, .modal-edit-cat__numbers {
+    display: flex;
+}
+
+.modal-add-cat__numbers, p:first-child {
+    margin-right: 30px;
+}
+
+.modal-edit-cat__numbers p:first-child {
+    margin-right: 30px;
+}
+
+.modal-add-cat__checkbox, .modal-edit-cat__checkbox {
+    display: inline;
+    font-size: 20px;
+}
+
+.modal-add-cat button {
+    display: block;
+    margin-left: auto;
+}
+
+.modal-edit-cat button {
+    display: block;
+    margin-left: auto;
+}
+
+/* Модальное окно кота */
+.modal-cat-card {
+    position: fixed;
+    background: #f0f0f0;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    margin-top: 15vw;
+}
+
+.modal-cat-card__img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+}
+
+.modal-cat-card__param {
+    padding: 15px 15px 35px 15px;
+    margin: auto 0;
+}
+
+.modal-cat-card__description {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 7px 0;
+}
+
+.modal-cat-card__text {
+    width: 250px;
+    padding-left: 10px;
+}
+
+.modal-cat-card__age {
+ font-size: 18px;
+ margin-bottom: 10px;
+}
+
+.modal-cat-card__infographic {
+    display: flex;
+    align-items: center;
+}
+
+.modal-cat-card__rating {
+    color: #ffbc00;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.modal-cat-card__favorite {
+    color: #4bcb90;
+    font-size: 30px;
+}

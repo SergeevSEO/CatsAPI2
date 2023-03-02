@@ -11,6 +11,117 @@
     <script defer src="./main.js"></script>
 </head>
 <body>
-    
+    <header class="header" id="header">
+        <div class="head">
+            <div class="logo">
+                CatsAPI
+            </div>
+            <button data-btn_add class="btn btn-add-cat">Добавить котика</button>
+        </div>
+    </header>
+    <div data-container class="container">
+        <!-- Карточки котов -->
+    </div>
+    <div data-modal_wrapper class="modal-wrapper hidden">
+        <div class="modal-add-cat">
+            <h2 class="modal-add-cat__header">
+                Добавить котика:
+            </h2>
+            <button data-btn_action = "modal-close" class="modal-close"><i class="fa-solid fa-rectangle-xmark"></i></button>
+            <form action="#" name="addCat">
+                <p>
+                    <label for="name">Имя:</label>
+                    <input type="text" name="name" id="name" required>
+                </p>
+                <p>
+                    <label for="image">Картинка(url):</label>
+                    <input type="url" name="image" id="image" required>
+                </p>
+                <div class="modal-add-cat__numbers">
+                    <p>
+                        <label for="age">Возраст:</label>
+                        <input type="number" min="1" max="20" name="age" id="age" required>
+                    </p>
+                    <p>
+                        <label for="rate">Рейтинг:</label>
+                        <input type="number" min="0" max="5" name="rate" id="rate" required>
+                    </p>
+                </div>    
+                <p>
+                    <input class="modal-add-cat__checkbox" type="checkbox" name="favorite" id="favorite">
+                    <label for="favorite">Любимчик</label>
+                </p>
+                <p>
+                    <label for="description">Описание:</label>
+                    <textarea name="description" id="description" cols="27" rows="7"></textarea>
+                </p>
+                <button data-modal_add type="submit" class="btn btn-add-cat">Добавить!</button>
+            </form>
+        </div>
+    </div>
+    <div data-modal_wrapper_edit class="modal-wrapper-edit hidden">
+        <div class="modal-edit-cat">
+            <h2 class="modal-edit-cat__header">
+                Изменить котика:
+            </h2>
+            <button data-btn_action = "modal-close" class="modal-close"><i class="fa-solid fa-rectangle-xmark"></i></button>
+            <form action="#" name="editCat">
+                <p>
+                    <label for="name">Имя:</label>
+                    <input type="text" name="name" id="name" required>
+                </p>
+                <p>
+                    <label for="image">Картинка(url):</label>
+                    <input type="url" name="image" id="image" required>
+                </p>
+                <div class="modal-edit-cat__numbers">
+                    <p>
+                        <label for="age">Возраст:</label>
+                        <input type="number" min="1" max="20" name="age" id="age" required>
+                    </p>
+                    <p>
+                        <label for="rate">Рейтинг:</label>
+                        <input type="number" min="0" max="5" name="rate" id="rate" required>
+                    </p>
+                </div>    
+                <p>
+                    <input class="modal-edit-cat__checkbox" type="checkbox" name="favorite" id="favorite">
+                    <label for="favorite">Любимчик</label>
+                </p>
+                <p>
+                    <label for="description">Описание:</label>
+                    <textarea name="description" id="description" cols="27" rows="7"></textarea>
+                </p>
+                <button data-modal_edit type="submit" class="btn btn-edit">Изменить!</button>
+            </form>
+        </div>
+    </div>
+    <div data-modal_cat-info data-id class="modal-cat-info hidden">
+        <div class="modal-cat-card">
+            <button data-btn_action = "modal-close" class="modal-close"><i class="fa-solid fa-rectangle-xmark"></i></button>
+            <img class="modal-cat-card__img" src="https://cattish.ru/wp-content/uploads/2018/04/mc-1-678x509.jpg" alt="#">
+            <div class="modal-cat-card__param">
+                <h2 class="modal-cat-card__name">
+                    <!-- Имя кота -->
+                </h2>
+                <div class="modal-cat-card__age">
+                    <!-- Возраст кота -->
+                </div>
+                <div class="modal-cat-card__infographic">
+                    <div class="modal-cat-card__rating">
+                        <!-- Рейтинг -->
+                    </div>
+                    <div class="modal-cat-card__favorite">
+                        <!-- Любимый/нелюбимый -->
+                    </div>
+                </div>
+                <div class="modal-cat-card__description">Описание:</div>
+                <p class="modal-cat-card__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dicta qui excepturi aspernatur, impedit consequuntur eaque, commodi, illum quidem nihil omnis earum enim incidunt quibusdam provident nisi quaerat? Ad, ipsam.
+                </p>
+            </div>
+            <button data-btn_action = "modal-edit" class="btn btn-edit modal-cat-card__btn">Изменить котика</button>
+        </div>
+    </div>
 </body>
 </html>
